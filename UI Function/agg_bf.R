@@ -61,4 +61,17 @@ agg_bf(y~x, grouping = 'k', data = M, algorithm = 'prodbf_iu', hypothesis = '> -
 agg_bf(y~x, grouping = 'k', data = M, algorithm = 'tbf_ic', hypothesis = '= -0.2')
 
 
+# pbf <- function(x, ...){
+#   cl <- match.call()
+#   if(all(sapply(x, inherits, what = "bain"))){ #if every object of x is a bain object...
+#     doe je de product bf:
+#       check of alle hypotheses hetzelfde zijn
+#     zo ja, bereken de product van de BF_ic's
+#   } else {                                    # if objects are not bain objects
+#       cl[[1L]] <- quote(bain)                 # verander de functie call (was pbf()), naar bain()
+#       cl[[x]] <- lapply(x, eval.parent, cl)   # run bain() op alle objected in x
+#       cl[[1L]] <- quote(pbf)                  # verander functie call terug naar pbf
+#       eval.parent(cl)                         # run functie opniew, maar nu met bain objecten in x
+#   }
+# }
 

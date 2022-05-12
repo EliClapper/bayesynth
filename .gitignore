@@ -14,3 +14,6 @@
 *.txt
 !sim_results*
 **/UI Function/cor_vs_lm.R
+Analysis/plot_en.RData
+Analysis/plot_ke.RData
+Analysis/plot_kn.RData
